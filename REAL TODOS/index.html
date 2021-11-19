@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>TODO</title>
+</head>
+
+<body>
+<!-- NavBar-->
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">TODOs</a>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="view.html">TODOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--    End Navbar-->
+
+<div class="container">
+
+    <h1 class="d-flex align-items-center justify-content-center mt-5 todo-h1"><input checked class="me-2 input-add"
+                                                                                     disabled
+                                                                                     type="checkbox">
+        <a href="#"> M </a>y<a href="#">Todo-s </a>
+    </h1>
+
+    <form class="d-flex align-items-center add-form">
+        <input autofocus type="text" class="form-control mt-5" id="input" placeholder="Add new...">
+        <input type="hidden" id="saveIndex"/>
+        <button class="btn btn-primary add-btn" id="submit"> ADD</button>
+        <button class="btn btn-primary add-btn" id="edit"> SAVE</button>
+        <textarea placeholder="Add new..." name="description" id="description" cols="20" rows="8"></textarea>
+        <input type="date" class="date" name="duedate" id="dueDate">
+    </form>
+    <p id="subInputText"></p>
+    <hr>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+
+</html>

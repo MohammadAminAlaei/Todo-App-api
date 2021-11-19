@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eff1f2;
+    position: relative;
+}
+
+h1 {
+    color: #0d6efd;
+}
+
+.input-add {
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+
+.input-add:disabled::after {
+    content: '✓';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #0d6efd;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+input[type='text'] {
+    padding: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 3px #ccc;
+}
+
+.add-form {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.add-btn {
+    position: absolute;
+    right: 2%;
+    top: 53%;
+    padding: 8px 25px;
+    font-size: 13px;
+}
+
+.icon {
+    border: none;
+}
+
+.btn-delete {
+    color: #f93154;
+}
+
+.btn-edite {
+    color: #3cc0ed;
+    margin-right: 10px;
+}
+
+main input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+}
+
+main a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #000;
+}
+
+.delete::after {
+    content: '';
+    width: 120%;
+    left: -10%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    display: block;
+    top: 50%;
+}
+
+#edit {
+    display: none;
+}
+
+.anime {
+    animation: .05s ease-in 1 alternate rocket;
+}
+
+@keyframes rocket {
+    from {
+        transform: rotate(1deg);
+    }
+    to {
+        transform: rotate(-1deg);
+    }
+}
+
+.row {
+    transition: all ease-in-out .3s;
+}
+
+.mainTag label {
+    overflow: auto;
+    padding-right: 20px !important;
+}
+
+.padd {
+    padding-right: 30px;
+}
+
+textarea {
+    position: absolute;
+    top: 160%;
+    width: 100%;
+    padding: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 3px #ccc;
+    resize: none;
+}
+
+.date {
+    position: absolute;
+    top: 370%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px .3px #ccc;
+    outline: none;
+}
+
+.toastt {
+    position: fixed;
+    padding: 20px;
+    bottom: 3%;
+    background-color: #34BE82;
+    color: #f2f2f2;
+    border-radius: 15px 0 15px 15px;
+    width: 20%;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    min-width: 200px;
+    animation: shake 4s;
+    transition: all ease-in-out .3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(-100%);
+    }
+    20%, 30%, 40%, 50%, 60%, 70%, 80% {
+        transform: translateX(3%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.teastButton {
+    border: none;
+    top: 0;
+    right: 1%;
+    position: absolute;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.classModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1055;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.424);
+}
+
+@media (max-width: 600px) {
+    .mainTag a {
+        font-size: 13px;
+    }
+
+    .row {
+        margin: 15px 0 !important;
+    }
+
+    .icon {
+        font-size: 12px;
+    }
+
+    .add-form {
+        display: block !important;
+    }
+
+    .add-form button {
+        position: static;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px 0;
+    }
+
+    input[type='text'] {
+        padding: 30px;
+        margin-top: 25px !important;
+    }
+
+    .todo-h1 {
+        margin-top: 25px !important;
+    }
+
+}
